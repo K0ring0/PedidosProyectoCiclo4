@@ -1,0 +1,23 @@
+<div class="blue darken-4">.</div>
+<nav>
+    <div class="nav-wrapper blue darken-1">
+      <a routerLink ="/inicio" class="right brand-logo"><i class="material-icons">pets</i></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="center hide-on-med-and-down">
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/personas">Personas</a></li>
+        <li *ngIf="seInicioSesion" ><a routerLink="administracion/listarproductos">Productos</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="seguridad/cambiarclave">Cambiar clave</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="seguridad/cerrarsesion">Cerrar Sesión</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificar">Iniciar sesión</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li *ngIf="seInicioSesion"><a routerLink="administracion/personas">Personas</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="administracion/listarproductos">Productos</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="seguridad/cambiarclave">Cambiar clave</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="seguridad/cerrarsesion">Cerrar Sesión</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="seguridad/identificar">Iniciar sesion</a></li>
+  </ul>

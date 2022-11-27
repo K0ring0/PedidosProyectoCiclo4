@@ -1,0 +1,20 @@
+<a routerLink="/administracion/crearproducto" class="waves-effect waves-light btn orange darken-4"><i class="material-icons left">add</i>Nuevo Producto</a>
+<table class="striped #e3f2fd blue-grey lighten-4" >
+    <thead>
+      <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Imagen</th>
+          <th>Editar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of listadoRegistros">
+        <td>{{p.nombre}}</td>
+        <td>{{p.precio}}</td>
+        <td><img src="{{p.imagen}}" width="100" height="100" class ="imagenProducto"/> </td>
+        <td><a routerLink="/administracion/editarproducto/{{p.id}}" class="waves-effect waves-light btn orange darken-4"><i class="material-icons left">add</i>Editar Producto</a> </td>        
+      </tr>
+    </tbody>
+  </table>
